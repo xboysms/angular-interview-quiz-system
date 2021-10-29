@@ -1,3 +1,4 @@
 export class Customer {
-    name = '';
+    name: string = '';
+    id: number = 0;
 }

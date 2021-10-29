@@ -10,3 +10,8 @@ export const selectCustomers = createSelector(
     selectCustomerState, 
     (state: fromCustomer.CustomerState) => state.customers
 );
+
+export const getCustomersList = createSelector(
+    selectCustomerState, 
+    (state: fromCustomer.CustomerState) => state.customers
+);
