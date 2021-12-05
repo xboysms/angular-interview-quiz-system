@@ -13,5 +13,5 @@ export const selectCustomers = createSelector(
 
 export const getCustomersList = createSelector(
     selectCustomerState, 
-    (state: fromCustomer.CustomerState) => state.customers
+    (state: fromCustomer.CustomerState) => [state.customers]
 );

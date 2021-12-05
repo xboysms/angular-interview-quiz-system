@@ -24,7 +24,7 @@ export class CustomerEffect {
           return this.customerService.getCustomerList().pipe(
             map((customers) => {
               console.log(customers);
-              return loadCustomerActionSuccess({customers});
+              return loadCustomerActionSuccess({customers: customers});
             })
           )
         })

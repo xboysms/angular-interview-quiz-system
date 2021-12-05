@@ -10,10 +10,12 @@ import { environment } from '../environments/environment';
 import { CustomerModule } from './customer/customer.module';
 import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
+import { StylesComponent } from './styles/styles.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StylesComponent
   ],
   imports: [
     BrowserModule,

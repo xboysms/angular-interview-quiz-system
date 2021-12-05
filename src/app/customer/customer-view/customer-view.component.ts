@@ -18,7 +18,6 @@ export class CustomerViewComponent implements OnInit {
     private store: Store<CustomerState>
   ) { 
     this.customers$ = this.store.pipe(select(selectCustomers));
-    // this.customers$ = this.store.select(loadCustomerAction);
   }
 
   ngOnInit(): void {
