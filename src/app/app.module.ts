@@ -11,6 +11,7 @@ import { CustomerModule } from './customer/customer.module';
 import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
 import { StylesComponent } from './styles/styles.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -24,8 +25,11 @@ import { StylesComponent } from './styles/styles.component';
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     CustomerModule,
     EffectsModule.forRoot([]),
-    HttpClientModule
-    
+    HttpClientModule,
+    FlexLayoutModule 
+    // https://github.com/angular/flex-layout#readme
+    // https://github.com/angular/flex-layout/wiki/Declarative-API-Overview
+    // https://tburleson-layouts-demos.firebaseapp.com/#/docs
   ],
   providers: [],
   bootstrap: [AppComponent]

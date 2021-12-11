@@ -29,7 +29,7 @@
         display: grid;
         // grid-template-columns: 1fr 1fr 1fr;
         gap: 1em;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         // grid-template-columns: 100px 100px 100px;
         grid-template-rows: 100px 100px 100px;
         &__card-item {
@@ -41,5 +41,19 @@
             justify-content: center;
             align-items: center;
         }
+        &__input {
+            color: red;
+        }
+        &__button {
+            color: green;
+        }
+    }
+}
+
+.fx-layout-1 {
+    &__item {
+        background-color: green;
+        min-width: 100px;
+        padding: 10px;
     }
 }
