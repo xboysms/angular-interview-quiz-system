@@ -1,59 +1,73 @@
-// .container {
-//     // margin: 0;
-//     // width:80%;
-
-//     .card {
-//         display: flex;
-//         flex-direction: row;
-//         flex-wrap: wrap;
-//         gap: 20px; // like space
-//         justify-content: space-between;
-
-//         &__card-item {
-//             display: flex;
-//             align-items: center;
-//             flex-direction: column;
-//             justify-content: center;
-//             flex-grow: 1;
-//             min-width: 100px;
-//             min-height: 100px;
-//             border: 1px solid #201c1c;
-//         }
-//     }
-// }
-
 .container {
-    // width: 80%;
-    // margin: 0 auto;
+    // margin: 0;
+    // width:80%;
+
     .card {
-        display: grid;
-        // grid-template-columns: 1fr 1fr 1fr;
-        gap: 1em;
-        grid-template-columns: repeat(3, 1fr);
-        // grid-template-columns: 100px 100px 100px;
-        grid-template-rows: 100px 100px 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px; // like space
+        justify-content: space-between;
+
         &__card-item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1;
             min-width: 100px;
             min-height: 100px;
             border: 1px solid #201c1c;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-        &__input {
-            color: red;
-        }
-        &__button {
-            color: green;
         }
     }
 }
+
+// .container {
+//     // width: 80%;
+//     // margin: 0 auto;
+//     .card {
+//         display: grid;
+//         // grid-template-columns: 1fr 1fr 1fr;
+//         gap: 1em;
+//         grid-template-columns: repeat(3, 1fr);
+//         // grid-template-columns: 100px 100px 100px;
+//         grid-template-rows: 100px 100px 100px;
+//         &__card-item {
+//             min-width: 100px;
+//             min-height: 100px;
+//             border: 1px solid #201c1c;
+//             display: flex;
+//             flex-direction: row;
+//             justify-content: center;
+//             align-items: center;
+//         }
+//         &__input {
+//             color: red;
+//         }
+//         &__button {
+//             color: green;
+//         }
+//     }
+// }
 
 .fx-layout-1 {
     &__item {
         background-color: green;
         min-width: 100px;
         padding: 10px;
+    }
+}
+
+.bootstrap {
+    color: #fff;
+    .panel {
+        gap: 10px;
+        display: flex;
+    }
+
+    &__item {
+        background-color: rgb(150, 150, 202);
+        min-width: 100px;
+        gap: 5px;
     }
 }
