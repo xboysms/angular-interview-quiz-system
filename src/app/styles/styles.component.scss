@@ -71,3 +71,16 @@
         gap: 5px;
     }
 }
+
+$general-var: 100%;
+.calc {
+    width: $general-var;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    &__item {
+        width: calc(100% / 3);
+        background-color:rgb(150, 150, 202);
+        padding: 5px;
+    }
+}
