@@ -82,5 +82,12 @@ $general-var: 100%;
         width: calc(100% / 3);
         background-color:rgb(150, 150, 202);
         padding: 5px;
+
+        &:nth-child(2) {
+            order: 1;
+        }
+        &:nth-child(1) {
+            order: 3;
+        }
     }
 }
