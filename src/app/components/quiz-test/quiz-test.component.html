@@ -1,0 +1,57 @@
+<ng-container #containerRef></ng-container>
+<div class="container">
+    <form [formGroup]="answersForm" (ngSubmit)="submit()">
+
+        <div class="intro-container flex-column">
+            <span class="intro-description">
+                {{questionsList[0].questionDesc}} <span class="text-danger" *ngIf="answersForm.invalid">*</span>
+            </span>
+            <div class="multiline-text" *ngIf="!isReview">
+                <textarea class="form-control" formControlName="questionDesc"></textarea>
+                <span class="text-danger" *ngIf="answersForm.get('questionDesc')?.errors?.['required']">This field is
+                    required</span>
+            </div>
+            <div class="multiline-text flex-column card p-3" *ngIf="isReview">
+                <span>Your answer:</span>
+                <span>{{answersForm.get('questionDesc')?.value}}</span>
+            </div>
+            <div class="answer-container">
+                <span class="question-description">
+                    {{questionsList[1].questionDesc}} <span class="text-danger" *ngIf="answersForm.invalid">*</span>
+                </span>
+                <div class="answers-list flex-column mt-3" *ngIf="!isReview">
+                    <ng-container class="answer-item" *ngFor="let item of questionsList[1].answerItems; let i = index"
+                        formArrayName='answerItems'>
+                        <mat-checkbox *ngIf="data.typeOfQuestion == 'checkboxList'" class="answer-item-check"
+                            [checked]="item.checked" (change)="this.getValue($event, item, i)" [formControlName]="i">
+                            {{item.languageDesc}}</mat-checkbox>
+                    </ng-container>
+
+                    <mat-radio-group name="answersList" class="flex-column mt-3"
+                        *ngIf="data.typeOfQuestion == 'paragraph'">
+                        <mat-radio-button *ngFor="let item of questionsList[1].answerItems; let i = index"
+                            [value]="item" [checked]="item.checked" formArrayName='answerItems'
+                            (change)="getRadioValue($event)" name="item-{{i}}">
+                            {{item.languageDesc}}
+                        </mat-radio-button>
+                    </mat-radio-group>
+
+                    <a routerLink="/builder" mat-list-item href="javascript:void(0)" (click)="addNewQuestion()">Add new question</a>
+                </div>
+
+                <div class="answers-list py-2 flex-column card p-3" *ngIf="isReview">
+                    <span>Your answer:</span>
+                    <div class="answer-item" *ngFor="let item of checkedItems; let i = index">
+                        {{item.languageDesc}}
+                    </div>
+                </div>
+
+                <div class="tool flex-row flex-right mt-4">
+                    <button mat-raised-button [color]="'primary'" (click)="viewMode()">{{isReview ? 'Back to Form
+                        Builder' : 'Review My Answers'}}</button>
+                </div>
+            </div>
+        </div>
+        <!-- <button type="submit">Submit to test</button> -->
+    </form>
+</div>

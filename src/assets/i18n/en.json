@@ -1,0 +1,33 @@
+{
+  "pageTitle": {
+    "title1": "User login",
+    "title2": "Staff List",
+    "title3": "Staff Entry",
+    "title4": "Avatar Editor",
+    "title5": "Header",
+    "title6": "Nav Menu",
+    "title7": "Dashboard"
+  },
+  "loginScreen": {
+    "text1": "Login with card",
+    "text2": "Login with account",
+    "text3": "Login with Windows account",
+    "text4": "Login failed.",
+    "text5": "Login successful."
+  },
+  "staffListComponent": {
+    "text1": "Search ...",
+    "text2": "View",
+    "text3": "Show Inactive Staff",
+    "text4": "results",
+    "text5": "Staff Name",
+    "text6": "Job Title",
+    "text7": "Country",
+    "text8": "Phone",
+    "text9": "Edit Staff",
+    "text10": "Show more menu",
+    "text11": "Security Center",
+    "text12": "Make Inactive",
+    "text13": "Make Active"
+  }
+}

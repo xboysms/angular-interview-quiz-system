@@ -1,0 +1,14 @@
+// Font
+// DEPRECATED, use mixins instead
+// i.e. @include font-size-standard
+$font-size: 16px;
+$font-size-small: ceil($font-size * 0.75);
+$font-size-large: ceil($font-size * 1.5);
+
+// Font & adjustments
+$base-size: 16px;
+$base-size-small: 8px;
+$base-size-large: 32px;
+$base-font-size: $base-size;
+$base-font: 'Arial', 'sans-serif';
+$tc7-font: 3.5em;

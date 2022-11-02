@@ -1,0 +1,33 @@
+{
+    "pageTitle": {
+      "title1": "Đăng nhập của người dùng",
+      "title2": "Danh sách nhân viên",
+      "title3": "Đầu vào của Nhân viên",
+      "title4": "Trình chỉnh sửa hình đại diện",
+      "title5": "Tiêu đề",
+      "title6": "Trình đơn điều hướng",
+      "title7": "Trang tổng quan"
+    },
+    "loginScreen": {
+      "text1": "Đăng nhập bằng thẻ",
+      "text2": "Đăng nhập bằng tài khoản",
+      "text3": "Đăng nhập bằng tài khoản Windows",
+      "text4": "Đăng nhập không thành công.",
+      "text5": "Đăng nhập thành công."
+    },
+    "staffListComponent": {
+      "text1": "Tìm kiếm ...",
+      "text2": "Hiển thị",
+      "text3": "Trạng thái nhân viên",
+      "text4": "kết quả",
+      "text5": "Tên nhân viên",
+      "text6": "Chức vụ",
+      "text7": "Quốc gia",
+      "text8": "Điện thoại",
+      "text9": "Chỉnh sửa nhân viên",
+      "text10": "Hiển thị thêm menu",
+      "text11": "Trung tâm Bảo mật",
+      "text12": "Hủy kích hoạt",
+      "text13": "Kích hoạt"
+    }
+ }

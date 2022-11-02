@@ -1,0 +1,27 @@
+<script src="./assets/particles.js"></script>
+
+<app-header></app-header>
+<div class="body" id="particles-js">
+    <div class="component-wrapper">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+declare var particlesJS: any;
+ngOnInit(): void {    
+	particlesJS.load('particles-js', '../assets/particles.json', null);
+}
+
+.particles-js-canvas-el {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+<div id="particles-js" class="body">
+    <div class="component-wrapper">
+        <router-outlet></router-outlet>
+    </div>
+    <canvas class="particles-js-canvas-el" width="937" height="902" style="width: 100%; height: 100%;">
+    </canvas>
+</div>

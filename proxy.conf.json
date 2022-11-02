@@ -1,0 +1,66 @@
+{  
+    "/api/*": 
+    {    
+        "target": "http://localhost:8080/server",    
+        "secure": false,    
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/ApiSecurity/*": 
+    {    
+        "target": "http://localhost:8080/server",    
+        "secure": false,    
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/ApiService/*": 
+    {    
+        "target": "http://localhost:8080/server",    
+        "secure": false,    
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/ApiViewOptions/*":
+    {    
+        "target": "http://localhost:8080/server",    
+        "secure": false,    
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/ApiStockSale/*":
+    {    
+        "target": "http://localhost:8080/server",    
+        "secure": false,    
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/ActiveReports":
+    {    
+        "target": "http://localhost:8080/server",    
+        "secure": false,    
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/AppLogs":
+    {    
+        "target": "http://localhost:8080/server",    
+        "secure": false,    
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/v2":
+    {    
+        "target": "http://localhost:8080/server",    
+        "secure": false,    
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/Content/Upload/*": 
+    {    
+        "target": "http://localhost:8080/server",    
+        "secure": false,    
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}
+

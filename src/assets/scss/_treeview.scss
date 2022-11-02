@@ -1,0 +1,15 @@
+@import "variables";
+.k-treeview {
+    .k-in{
+        &.k-state-selected{
+            color: $darkblue;
+        }
+        &:hover, &.k-state-focused, &.k-state-hover{
+            background-color: transparent;
+        }
+    }
+}
+.k-checkbox:checked+.k-checkbox-label::before{
+    border-color: $darkblue;
+    background-color: $darkblue;
+}

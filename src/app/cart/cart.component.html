@@ -1,0 +1,21 @@
+<div class="product-container">
+    <h1 class="flex-row flex-center">Product List</h1>
+    <div class="product-list-container row">
+        <div class="product-container flex-row flex-wrap" *ngFor="let parent of groupedItemsInArray">
+            <div class="product-category">
+                <div class="category-title">{{parent.category}}</div>
+                <div class="category-container flex-row flex-wrap">
+                    <div class="product-item col-md-2 flex-column flex-center" *ngFor="let item of parent.data">
+                        {{item.productName}}
+                        <div class="product-content flex-column flex-center">
+                            <span class="product-price">{{item.price}}</span>
+                            <span class="product-category">{{item.category}}</span>
+                            <span *ngIf="item.oldPrice" class="product-old-price">{{item.oldPrice}}</span>
+                        </div>
+                        <a href="javascript:void(0)" class="price-btn" (click)="addToCart(item)">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

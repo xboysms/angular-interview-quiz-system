@@ -1,0 +1,29 @@
+<div class="new-question-container flex-row flex-column">
+    <mat-label>Choose your type of question</mat-label>
+    <kendo-dropdownlist [valuePrimitive]="true" [data]="typeOfQuestion" [textField]="'description'"
+        [valueField]="'code'" [(ngModel)]="data.typeOfQuestion">
+    </kendo-dropdownlist>
+
+    <div class="question-container flex-column">
+        <!-- <mat-label>Type description of question</mat-label> -->
+        <input placeholder="Type question here" class="form-control" *ngIf="dataList.length > 0" type="text"
+            [(ngModel)]="data.questionItem.questionDesc" />
+        <div class="question-list" *ngFor="let item of dataList; let i = index">
+            <div class="data-group flex-column">
+                <mat-label>Add Answer Option {{i + 1}}</mat-label>
+                <input class="form-control" type="text" [(ngModel)]="item.languageDesc" placeholder="description" />
+                <input class="form-control" type="text" [(ngModel)]="item.value" placeholder="value" />
+                <hr />
+            </div>
+        </div>
+        <button mat-raised-button (click)="addAnswer()">Add another answer</button>
+    </div>
+
+    <mat-checkbox [(ngModel)]="data.specifyTheirOwn">Allow user to specify their own answer</mat-checkbox>
+    <mat-checkbox [(ngModel)]="data.isRequired">This field is required</mat-checkbox>
+
+    <kendo-dialog-actions>
+        <span>Total of answer options: {{dataList.length}}</span>
+        <button mat-raised-button (click)="submit()">Submit</button>
+    </kendo-dialog-actions>
+</div>

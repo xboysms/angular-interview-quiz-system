@@ -1,0 +1,45 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <div class="header-container flex-row">
+            <div class="left-header-container flex-row flex-center">
+                <button mat-icon-button (click)="toggleMainMenu()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span class="brand-label"><a href="">Product Management</a></span>
+            </div>
+
+            <div class="right-header-container flex-row flex-right flex-center">
+                <div class="cart-btn">
+                    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                        <mat-icon>add_shopping_cart</mat-icon>
+                    </button>
+                    <div class="number-item" *ngIf="productCartItems.length > 0">{{productCartItems.length}}</div>
+                    <mat-menu #menu="matMenu" [hasBackdrop]="false">
+                        <div class="cart-container">
+                            <span class="no-item" *ngIf="productCartItems.length == 0">No item.</span>
+                            <div class="product-cart-item-container" *ngIf="productCartItems.length > 0">
+                                <div class="product-cart-item" *ngFor="let item of productCartItems; let i = index">
+                                    <button mat-menu-item class="mat-menu-btn flex-space-between">
+                                        <div>{{item.productName}}-{{item.category}}</div>
+                                        <div class="cart-tool">
+                                            <mat-icon matTooltip="Edit" (click)="$event.stopPropagation()">edit</mat-icon>
+                                            <mat-icon matTooltip="Delete" (click)="deleteItemOnCart(item, i); $event.stopPropagation()">delete</mat-icon>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="total-container flex-column px-3" *ngIf="productCartItems.length > 0">
+                                <hr />
+                                <span>Promote code: <input type="text" [(ngModel)]="discountString" #discountStringValue (keypress)="getPromoteCode($event, discountStringValue.value)" (click)="$event.stopPropagation()" /></span>
+                                <span>Total: {{productCartItems.length}} items</span>
+                                <span>Total price before discount: {{totalPriceBeforeDiscount | number: '1.0-0'}}</span>
+                                <span>Total price after discount: {{totalPrice | number: '1.0-0'}}</span>
+                                <span class="alert" *ngIf="discountString !== '' && discountString !== promotionCode">Wrong Promotion code</span>
+                            </div>
+                        </div>
+                    </mat-menu>
+                </div>
+            </div>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

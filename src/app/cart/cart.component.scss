@@ -1,0 +1,25 @@
+.product-container {
+    padding: 1em;
+    .product-list-container {
+        .product-category {
+            width: 100%;
+        }
+        .product-item {
+            background: #d1d1d1;
+            color: white;
+            
+            padding: 0.2em;
+            position: relative;
+
+            .product-content {
+                min-height: 10vh;
+                margin-bottom: 1em;
+            }
+
+            .price-btn {
+                position: absolute;
+                bottom: 0px;
+            }
+        }
+    }
+}

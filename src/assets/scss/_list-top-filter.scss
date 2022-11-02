@@ -1,0 +1,351 @@
+﻿@import "_variables.scss";
+//@import 'modules/_colors.scss';
+@import "_mixins.scss";
+
+.filter-top-wrapper {
+  margin-bottom: 10px;
+  .mb15 {
+    margin-bottom: 7px;
+  }
+  .search-box,
+  .additional-filters {
+    margin-left: -5px;
+    margin-right: -5px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    div {
+      padding-left: 5px;
+      padding-right: 5px;
+      margin-bottom: 5px;
+      @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+      }
+    }
+    .search-field {
+      @media screen and (min-width: 768px) {
+        width: 20%;
+      }
+    }
+    .search-text {
+      position: relative;
+
+      @media screen and (min-width: 768px) {
+        width: 60%;
+      }
+      .search-icon {
+        position: absolute;
+        right: 15px;
+        top: 6px;
+        cursor: pointer;
+      }
+    }
+    .search-order {
+      @media screen and (min-width: 768px) {
+        width: 20%;
+      }
+    }
+    .form-control {
+      max-width: none;
+    }
+    .search-filter {
+      width: 65px;
+      padding-left: 5px;
+      padding-right: 5px;
+      margin: 0;
+
+      &:after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+      .btn {
+        @media screen and (min-width: 768px) {
+          padding-top: 4px;
+          float: left;
+        }
+      }
+    }
+  }
+
+  .cloud-view-mode {
+    font-size: 20px;
+    width: auto;
+    text-align: right;
+    padding-top: 10px;
+    @media screen and (min-width: 992px) {
+      padding-top: 0;
+    }
+    .view-mode-icon {
+      display: inline-block;
+      padding: 1px 10px;
+
+      .cloud-icon {
+        opacity: 0.2;
+      }
+
+      &.active {
+        .cloud-icon {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .filter-invoices-item {
+    margin-bottom: 10px;
+    // flex-wrap: wrap;
+    // width: calc(100% - 50px);
+    &__inner {
+      display: flex;
+      margin-left: -5px;
+      margin-right: -5px;
+      ::ng-deep {
+        .client-combobox {
+          kendo-dropdownlist {
+            max-width: initial;
+            width: 100%;
+            height: 100%;
+            .k-dropdown-wrap {
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+    .item {
+      display: flex;
+      padding-left: 5px;
+      padding-right: 5px;
+      margin-bottom: 10px;
+    }
+    .k-dropdown,
+    .k-combobox,
+    .k-datepicker,
+    .k-timepicker {
+      max-width: none;
+      height: 30px;
+    }
+    .form-control {
+      max-width: none;
+      height: 30px;
+    }
+    .input-search {
+      display: block;
+      width: 100%;
+      position: relative;
+      .form-control {
+        padding-right: 25px;
+      }
+      .search-icon {
+        position: absolute;
+        right: 5px;
+        top: 6px;
+        cursor: pointer;
+        display: block;
+      }
+    }
+
+    &.hide-invoice-filter {
+      display: none;
+    }
+    &.show-invoice-filter {
+      display: flex;
+    }
+  }
+  .filter-top-bottom {
+    padding: 3px 5px;
+    background: rgba(200, 200, 200, 0.2);
+  
+    .more-action {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 100%;
+      .page-size-action {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      label {
+        margin: 0;
+      }
+
+      select,
+      .k-dropdown {
+        width: auto;
+        margin: 0 15px;
+        display: initial;
+        padding-top: 0;
+        height: 24px;
+        padding-bottom: 0;
+      }
+      .show-results {
+        // padding: 0 10px 0 0;
+        // display: flex;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        span {
+          margin-right: 5px;
+        }
+
+        @media screen and (min-width: 768px) {
+          padding-right: 10px;
+        }
+        span {
+          font-weight: 600;
+        }
+      }
+      .extend-dropdown {
+        width: auto;
+        font-size: 14px;
+        // .dropdown-toggle {
+        //   &:focus {
+        //     box-shadow: none;
+        //   }
+        //   &:hover {
+        //     background-color: transparent;
+        //   }
+        // }
+        // .show > .dropdown-toggle {
+        //   background-color: transparent;
+        // }
+        .dropdown.desktop {
+          display: none;
+          @media screen and (min-width: 1280px) {
+            display: inline-block;
+          }
+        }
+        .dropdown.mobile {
+          display: inline-block;
+          @media screen and (min-width: 1280px) {
+            display: none;
+          }
+        }
+        #dropdownBasic1 {
+          width: 24px;
+          height: 24px;
+          // border: 1px solid rgba(51, 51, 51, 0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          // color: #6ec3ef;
+          border-radius: 50%;
+          // background-color: $white;
+        }
+        #dropdownBasic2 {
+          border: 0;
+          background-color: transparent;
+          padding: 0 0 0 5px;
+          display: flex;
+          align-items: center;
+          height: 31px;
+          color: $colortext;
+          &:hover {
+            color: $colortext;
+            i {
+              color: $blue;
+            }
+          }
+          i {
+            color: $blue;
+            margin-right: 10px;
+            font-size: 12px;
+            transform: rotate(-90deg);
+            @media screen and (min-width: 1280px) {
+              transform: none;
+            }
+          }
+        }
+      }
+    }
+
+    .menu-setting {
+      i.cloud-icon-close {
+        display: none;
+        font-size: 10px;
+      }
+
+      &.show {
+        i.cloud-icon-more {
+          display: none;
+        }
+        i.cloud-icon-close {
+          display: inline-block;
+        }
+      }
+    }
+
+    .dropdown-toggle::after {
+      display: none;
+    }
+  }
+  .form-check {
+    margin: 0;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    @media screen and (min-width: 768px) {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      padding-top: 3px;
+    }
+  }
+}
+
+.submenu-filter {
+  padding: 0;
+  border-radius: 0;
+  border: 1px solid rgba(204, 204, 204, 0.5);
+  .dropdown-item {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    &:hover {
+      background-color: $bg;
+    }
+  }
+  .dropdown-menu {
+    font-size: 14px;
+    border-radius: 0;
+    padding: 0 5px 0 0;
+    border: 1px solid transparent;
+    .list-sub-dropdown {
+      border: 1px solid rgba(204, 204, 204, 0.5);
+    }
+  }
+  &__item {
+    padding: 5px 10px;
+  }
+  button.dropdown-item {
+    padding: 5px 10px;
+  }
+}
+
+.content-filter {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+  .filter-left {
+    @media screen and (min-width: 768px) {
+      width: calc(100% - 75px);
+    }
+  }
+  .filter-right {
+    text-align: right;
+    @media screen and (min-width: 768px) {
+      width: 75px;
+      padding-left: 10px;
+      text-align: center;
+    }
+  }
+}

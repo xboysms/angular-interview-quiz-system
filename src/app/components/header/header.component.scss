@@ -1,0 +1,64 @@
+mat-toolbar {
+    position: fixed;
+    z-index: 9999;
+}
+
+.header-container {
+    width: 100%;
+    justify-content: space-between;
+
+    .logo-image {
+        width: 10vh;
+    }
+
+    .usermenu-button {
+        border: none;
+        background: transparent;
+    }
+
+    .profile-photo {
+        width: 8vh;
+    }
+
+    .left-header-container {
+
+    }
+
+    .right-header-container {
+        .cart-btn {
+            position: relative;
+
+            .number-item {
+                position: absolute;
+                left: -2em;
+                top: 0px;
+                background: red;
+                padding: 5px;
+                border-radius: 50%;
+                width: 5vh;
+                height: 5vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+            }
+        }
+    }
+}
+
+.no-item {
+    padding: 1em;
+    min-height: 6vh;
+}
+.mat-menu-btn {
+    display: flex !important;
+    gap: 5px;
+}
+::ng-deep .mat-menu-content {
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+}
+.alert {
+    color: red;
+}

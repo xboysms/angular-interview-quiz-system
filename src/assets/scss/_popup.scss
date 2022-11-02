@@ -1,0 +1,86 @@
+@import "variables";
+.popup-dialog {
+  .k-window {
+    background: $bg2;
+    width: 90%;
+    height: 90%;
+
+    @media screen and (min-width: 2000px) {
+      max-width: 1728px;
+    }
+  }
+}
+
+.scrolltop {
+  height: calc(100% - 10px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  margin-right: -5px;
+  padding-right: 5px;
+  &.sticky {
+    margin-top: 50px;
+    height: calc(100% - 60px);
+    .stock-detail-top {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      background: #6ec3ef;
+      color: #fff;
+      height: 50px;
+      z-index: 10;
+      .stock-detail-top__image {
+        display: none;
+      }
+      .stock-detail-top__right {
+        .stock-detail-top__right__content {
+          .block-left {
+            .title-stock-detail {
+              .btn-smallest {
+                display: none;
+              }
+            }
+            .sub-des,
+            .main-detail,
+            .price-list {
+              display: none;
+            }
+          }
+          .block-right {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wrap-scroll {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.k-window-actions {
+  margin: 0;
+}
+
+.k-overlay {
+  &-second {
+    z-index: 10003 !important;
+  }
+}
+
+.close-paperwork {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    bottom: -5px;
+    position: relative;
+    min-width: 115px;
+    background-color: $white;
+  }
+}
